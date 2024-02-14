@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Un fruit</h1>
+
+    <h4>Name : {{ fruit.name }}</h4>
+    <h4>Price : {{ fruit.price }} €</h4>
+
+    <a class="btn btn-secondary" href="{{ path("app_fruit") }}">retour</a>
+    <a class="btn btn-danger" href="{{ path("delete_fruit",{id:fruit.id}) }}">delete</a>
+    <a class="btn btn-warning" href="{{ path("edit_fruit",{id:fruit.id}) }}">edit</a>
+
+{% endblock %}
